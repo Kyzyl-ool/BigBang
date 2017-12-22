@@ -7,17 +7,17 @@ Uses
 
 //Global constants
 Const
-	amount	=	600;
+	amount		=	600;
 	ps		=	2;
 	PP 		= 	500;
 
 //Global variables
 Var
 	p		: 	array[1..600] of MatPoint;
-	i, j	: 	word;
+	i, j		: 	word;
 	kc		: 	real;
 	Eo		: 	extended;
-	bufer	: 	string;
+	bufer		: 	string;
 
 Procedure glWrite(
 	x, y	:	real;
@@ -116,8 +116,8 @@ end;
 
 Var
 	red		:	real;
-	green	:	real;
-	blue	:	real;
+	green		:	real;
+	blue		:	real;
 	fi		:	real;
 Begin
 	ClrScr;
@@ -154,7 +154,7 @@ Begin
 		#32:
 			for i:=1 to amount do
 				begin
-					p[i]	:=	MatPoint.Create;
+					p[i]		:=	MatPoint.Create;
 					kc		:=	random;
 					fi		:=	random*pi*2;
 					p[i].Init_DL(
@@ -162,7 +162,7 @@ Begin
 						KR - random*2*PP*sin(fi) + PP, 			//y
 						kc*1,									//r
 						kc*1,									//g
-						1,										//b
+						1,									//b
 						kc*KM,									//mass
 						sin(random*pi*2)*sqr(p[i].GetVx + 1),	//Vx
 						cos(random*pi*2)*sqr(p[i].GetVy + 1))	//Vy
